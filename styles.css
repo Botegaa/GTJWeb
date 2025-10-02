@@ -199,7 +199,7 @@ span.tag {
   width: 350px;
   height: 250px;
   background: #e0e0e0;
-  object-fit: cover;
+  object-fit: fill;  
   display: block;
   margin: 0;
   padding: 0;
