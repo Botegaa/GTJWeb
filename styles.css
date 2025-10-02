@@ -1,11 +1,10 @@
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.6;
   color: #333;
 }
@@ -23,13 +22,11 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
 }
 
 .container {
   width: 100%;
   padding: 32px;
-
 }
 
 .logo {
@@ -59,7 +56,7 @@ nav {
 }
 
 .btn-contato {
-  background: #5D5A57;
+  background: #5d5a57;
   color: white;
   padding: 0.5rem 1rem;
   border: none;
@@ -71,10 +68,9 @@ nav {
   display: flex;
   align-items: center;
   gap: 12px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   transition: background 0.2s;
-  
 }
 
 .btn-contato:hover {
@@ -99,22 +95,32 @@ nav {
   color: white;
 }
 
+.overlay {
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  background: url("assets/hero.png") no-repeat center center/cover;
+  filter: blur(6px);
+  height: 110%;
+  width: 110%;
+  z-index: -1;
+}
 
 .hero {
   position: relative;
   height: 800px;
-  background: url("assets/hero.png") no-repeat center center/cover;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.47);
+  background: rgba(0, 0, 0, 0.47);
 }
 
 .hero-content {
@@ -124,36 +130,39 @@ nav {
   color: white;
   padding: 32px;
   font-size: 32px;
-  width:1200px;
+  width: 1200px;
 }
 .hero-content .tag {
   background: white;
-  color: black;
+  /* color: black; */
+  color: #3e3c3a;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 9999px;
-  width:244;
-  height: 44;
-  font-size: 0.7rem;
-
+  width: 244px;
+  height: 44px;
+  font-size: 1rem;
 }
+
+span.tag {
+  font-weight: 600;
+}
+
 .hero-title {
-    font-family: 'Georama', sans-serif;
-    font-size: 72px;
+  font-family: "Georama", sans-serif;
+  font-size: 72px;
 }
 
-.subtitle-hero{
-  font-size: 24px!important;
+.subtitle-hero {
+  font-size: 24px !important;
   max-width: 646px;
   overflow: hidden;
   display: -webkit-box;
-  -webkit-line-clamp: 3; 
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   line-height: 1.2em;
   margin-top: 1rem;
 }
-
-
 
 .hero-content p {
   margin-top: 1rem;
@@ -162,21 +171,20 @@ nav {
 
 .areas {
   height: 700px;
- 
+
   margin-top: 64px;
   margin-bottom: 64px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 48px;
-  
 }
 
 .areas article {
   display: flex;
   align-items: center;
-  gap: 1.5rem; 
-  justify-content: space-between; 
+  gap: 1.5rem;
+  justify-content: space-between;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
@@ -197,7 +205,6 @@ nav {
   padding: 0;
 }
 
-
 .areas article div {
   max-width: 600px;
   margin: 0;
@@ -205,27 +212,25 @@ nav {
 }
 
 .area-title {
-    font-family: 'Georama', sans-serif;
-    font-size: 40px;
+  font-family: "Georama", sans-serif;
+  font-size: 40px;
 }
 
-.area-subtitle{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-
+.area-subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
 }
 
 .sobre-title {
-    font-family: 'Georama', sans-serif;
-    font-size: 48px;
-    align-items: flex-start;
+  font-family: "Georama", sans-serif;
+  font-size: 48px;
+  align-items: flex-start;
 }
 
-
 .experiencia {
-  width:100% ;
+  width: 100%;
   height: 702px;
-  background-color: #E7E4E1;
+  background-color: #e7e4e1;
   align-items: flex-start;
 }
 
@@ -237,9 +242,6 @@ nav {
   margin: 0 auto;
   align-items: flex-start;
 }
-
-
-
 
 .experiencia img {
   width: 387px;
@@ -255,32 +257,52 @@ nav {
 }
 
 .experiencia p {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
-      margin-left: 48;
-    
-
-
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  margin-left: 48;
 }
 .texto-exp {
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  gap: 32px;
 }
 
+.exp-p {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
 
 .contato {
-  background: url("assets/FotoAgenda.png") no-repeat center center/cover;  
   color: white;
   text-align: center;
   padding: 4rem 1rem;
   height: 314px;
- 
+  position: relative;
+}
+
+.contato-overlay {
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  background: url("assets/FotoAgenda.png") no-repeat center center/cover;
+  filter: blur(6px);
+  height: 110%;
+  width: 110%;
+  z-index: -1;
+}
+
+.contato-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.47);
 }
 
 .btn-contato2 {
-  background: #5D5A57;
+  background: #5d5a57;
   color: white;
   padding: 0.5rem 1rem;
   border: none;
@@ -290,7 +312,7 @@ nav {
   width: 244px;
   height: 44px;
   gap: 12px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 14px;
   transition: background 0.2s;
   display: flex;
@@ -300,27 +322,22 @@ nav {
   margin-top: 16px;
 }
 
-.contato-title{
-
-font-family: 'Georama', sans-serif;
-    font-size: 48px;
-
+.contato-title {
+  font-family: "Georama", sans-serif;
+  font-size: 48px;
 }
-
-
 
 footer {
   background: #756f6b;
   padding: 0;
   color: #fff;
-  width:100% ;
+  width: 100%;
   height: 352px;
-
 }
 
-.footer-content{
-max-width: 1200px;  
-margin: 0 auto 24px auto;
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto 24px auto;
 }
 
 .footer-main {
@@ -349,7 +366,7 @@ margin: 0 auto 24px auto;
 
 .footer-title {
   display: block;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 18px;
   color: #fff;
@@ -367,8 +384,7 @@ margin: 0 auto 24px auto;
   padding-left: 32px;
   font-size: 14px;
   color: #cacaca;
-  font-family: 'Montserrat', sans-serif;
-  
+  font-family: "Montserrat", sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -380,7 +396,7 @@ margin: 0 auto 24px auto;
     top: 60px;
     right: 10px;
     padding: 1rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   }
   .nav-links.active {
     display: flex;
@@ -393,12 +409,11 @@ margin: 0 auto 24px auto;
   }
 }
 @media (max-width: 768px) {
-
   header {
     width: 100%;
     padding: 16px;
     position: fixed;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0, 0, 0, 0.7);
   }
 
   .container {
@@ -421,7 +436,7 @@ margin: 0 auto 24px auto;
   }
 
   .subtitle-hero {
-    font-size: 16px!important;
+    font-size: 16px !important;
     max-width: 100%;
     -webkit-line-clamp: unset; /* deixa o texto inteiro no mobile */
   }
@@ -500,4 +515,3 @@ margin: 0 auto 24px auto;
     text-align: center;
   }
 }
-
