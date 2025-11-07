@@ -158,6 +158,7 @@ span.tag {
   max-width: 646px;
   overflow: hidden;
   display: -webkit-box;
+  line-clamp: 3;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   line-height: 1.2em;
@@ -199,7 +200,7 @@ span.tag {
   width: 350px;
   height: 250px;
   background: #e0e0e0;
-  object-fit: fill;  
+  object-fit: fill;
   display: block;
   margin: 0;
   padding: 0;
@@ -309,7 +310,7 @@ span.tag {
   border-radius: 9999px;
   cursor: pointer;
   font-weight: 300;
-  
+
   gap: 12px;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
@@ -414,8 +415,6 @@ footer {
     background: rgba(0, 0, 0, 0.7);
   }
 
-  
-
   .container {
     padding: 16px;
   }
@@ -438,6 +437,7 @@ footer {
   .subtitle-hero {
     font-size: 16px !important;
     max-width: 100%;
+    line-clamp: unset;
     -webkit-line-clamp: unset; /* deixa o texto inteiro no mobile */
   }
 
@@ -522,5 +522,176 @@ p a {
   transition: color 0.3s;
 }
 
+#instagram {
+  display: flex;
+  max-width: none;
+  background-color: WHITE;
+  gap: 3rem;
+  justify-content: center;
+  height: 40rem;
+  overflow: hidden;
+  padding: 4rem 0;
 
+  .icon-xl {
+    width: 4rem;
+    height: 4rem;
+  }
 
+  .hidden {
+    display: none;
+  }
+
+  .insta-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 39rem;
+    height: 100%;
+    justify-content: center;
+
+    h2 {
+      font-family: "Georama", sans-serif;
+      font-size: 48px;
+      align-items: flex-start;
+
+      span.highlight {
+        --gbs-color-highlight-font: var(--gbs-color-neutral-10);
+      }
+    }
+
+    .btn-instagram {
+      background-color: #3e3c3a;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 9999px;
+      width: 244px;
+      height: 44px;
+      font-size: 14px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      text-decoration: none;
+
+      &:hover {
+        background-color: #333;
+      }
+    }
+  }
+
+  .device-mockup {
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 140%;
+    border-radius: 3rem;
+    overflow: hidden;
+
+    .mockup-device {
+      max-width: 25rem;
+      aspect-ratio: 412 / 833;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 98%;
+      width: 95%;
+      border-radius: 3rem;
+      overflow: hidden;
+
+      .mockup-track {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        height: 100%;
+        width: 100%;
+        transition: transform 0.8s ease;
+        border-radius: 3rem;
+
+        video {
+          flex: 0 0 100%;
+          width: 100%;
+          height: 100%;
+          aspect-ratio: 412 / 833;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .phone-mockup {
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .play-pause {
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      right: 50%;
+      background-color: transparent;
+      transform: translate(50%, -50%);
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: #e5e5e5;
+
+      .pause {
+        color: transparent;
+      }
+
+      &:hover {
+        color: white;
+
+        .pause {
+          color: currentColor;
+        }
+      }
+    }
+
+    .prev-video {
+      position: absolute;
+      z-index: 99;
+      top: 50%;
+      left: 20%;
+      transform: translateY(-50%);
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: #e5e5e5;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    .next-video {
+      position: absolute;
+      z-index: 99;
+      top: 50%;
+      right: 20%;
+      transform: translateY(-50%);
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      color: #e5e5e5;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+
+    @media (max-width: 700px) {
+      display: none;
+    }
+  }
+}
