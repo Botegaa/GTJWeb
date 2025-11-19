@@ -3,6 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.justificar {
+  text-align: justify;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.6;
@@ -108,7 +113,7 @@ nav {
 
 .hero {
   position: relative;
-  height: 1000px;
+  height: 900px;
 
   display: flex;
   align-items: center;
@@ -282,6 +287,7 @@ span.tag {
   padding: 4rem 1rem;
   height: 314px;
   position: relative;
+  overflow: hidden;
 }
 
 .contato-overlay {
