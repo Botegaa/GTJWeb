@@ -104,21 +104,26 @@ nav {
   position: absolute;
   top: -5%;
   left: -5%;
-  background: url("assets/hero.png") no-repeat center center/cover;
-  filter: blur(6px);
+  background: url("assets/CINZA.png") no-repeat center center/cover;
   height: 110%;
   width: 110%;
-  z-index: -1;
+  
 }
 
 .hero {
   position: relative;
-  height: 900px;
+  height: 920px;
 
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+}
+
+.hero-img{
+  position: absolute;
+  top: -100%;
+  left:  -100px;
 }
 
 .hero::before {
@@ -139,7 +144,6 @@ nav {
 }
 .hero-content .tag {
   background: white;
-  /* color: black; */
   color: #3e3c3a;
   padding: 0.5rem 1rem;
   border: none;
@@ -155,7 +159,7 @@ span.tag {
 
 .hero-title {
   font-family: "Georama", sans-serif;
-  font-size: 72px;
+  font-size: 48px;
 }
 
 .subtitle-hero {
@@ -231,6 +235,9 @@ span.tag {
   font-family: "Georama", sans-serif;
   font-size: 48px;
   align-items: flex-start;
+  margin: 0 auto;
+  margin-bottom: 32px;
+  margin-top: 32px;
 }
 
 .experiencia {
@@ -701,3 +708,94 @@ p a {
     }
   }
 }
+.team-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;       
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.equipes {
+  display: flex;
+  justify-content: center;   
+  gap: 128px;
+  width: 100%;
+}
+
+.foto-team{
+  width: 387px;
+  height: 516px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.advs{
+  max-width: 387px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.nome-advs{
+  font-size: 32px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.posicao{
+  font-size: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: #807D79;
+}
+
+.team-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: justify;
+}
+
+/* ===========================
+   RESPONSIVO (CELULAR / TABLET)
+   =========================== */
+@media (max-width: 768px) {
+  .team-container {
+    padding: 48px 16px;
+    align-items: stretch;
+  }
+
+  .equipes {
+    flex-direction: column; 
+    gap: 40px;
+  }
+
+  .advs {
+    max-width: 100%;
+  }
+
+  .foto-team {
+    width: 100%;            
+    max-width: 320px;        
+    height: auto;            
+    align-self: center;       
+  }
+
+  .nome-advs {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .posicao {
+    font-size: 18px;
+  }
+
+  .team-details p {
+    font-size: 0.95rem;
+    text-align: left;        
+  }
+}
+
