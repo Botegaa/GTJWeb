@@ -374,6 +374,12 @@ footer {
   gap: 64px;
   justify-content: space-between;
   align-items: flex-start;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
 
 .footer-title {
@@ -382,7 +388,6 @@ footer {
   font-weight: bold;
   font-size: 18px;
   color: #fff;
-  margin-bottom: 16px;
 }
 
 .footer-info p {
@@ -422,13 +427,20 @@ footer {
 @media (max-width: 768px) {
   header {
     width: 100%;
-    padding: 10px;
+    padding: 2rem 1rem 1rem 1rem;
     position: fixed;
     background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .container {
+      padding: 0;
+    }
   }
 
   .container {
-    padding: 6rem 0;
+    padding: 1.5rem 0;
   }
 
   .hero {
@@ -481,6 +493,11 @@ footer {
     align-items: center;
     text-align: center;
     gap: 24px;
+    padding: 0;
+
+    .foto {
+      width: 100%;
+    }
   }
 
   .experiencia img {
@@ -492,6 +509,7 @@ footer {
     width: 100%;
     margin-left: 0;
     align-items: center;
+    gap: 18px;
   }
 
   .contato {
@@ -508,6 +526,7 @@ footer {
     align-items: center;
     gap: 24px;
     text-align: center;
+    padding: 1rem;
   }
 
   .footer-map iframe {
@@ -516,10 +535,18 @@ footer {
   }
 
   .footer-info {
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
     gap: 24px;
     width: 100%;
-    align-items: center;
+    justify-content: space-between;
+    /* align-items: center; */
+
+    & > div {
+      max-width: calc(50% - 24px);
+      
+
+    }
   }
 
   .footer-copy {
@@ -715,6 +742,17 @@ p a {
   }
 }
 
+@media (max-width: 768px) {
+  #instagram .insta-content {
+    padding: 1rem;
+    align-items: center;
+
+    h2 {
+      text-align: center;
+    }
+  }
+}
+
 .team-container {
   width: 100%;
   max-width: 1200px;
@@ -789,8 +827,8 @@ p a {
 
   .foto-team {
     width: 100%;            
-    max-width: 320px;        
-    height: auto;            
+    /* max-width: 320px;         */
+    /* height: auto;             */
     align-self: center;       
   }
 
