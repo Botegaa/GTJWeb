@@ -36,15 +36,19 @@ nav {
 
 .logo {
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: white;
   cursor: pointer;
+
+  img {
+    height: 2rem;
+  }
 }
 
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 1.5rem;
+  gap: 2.5rem;
   font-size: 20px;
 }
 
@@ -72,6 +76,7 @@ nav {
   height: 44px;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
   font-family: "Montserrat", sans-serif;
   font-size: 14px;
@@ -159,16 +164,16 @@ span.tag {
 
 .hero-title {
   font-family: "Georama", sans-serif;
-  font-size: 48px;
+  font-size: 72px;
 }
 
 .subtitle-hero {
-  font-size: 24px !important;
-  max-width: 646px;
+  font-size: 28px !important;
+  max-width: 800px;
   overflow: hidden;
   display: -webkit-box;
-  line-clamp: 3;
-  -webkit-line-clamp: 3;
+  /* line-clamp: 3;
+  -webkit-line-clamp: 3; */
   -webkit-box-orient: vertical;
   line-height: 1.2em;
   margin-top: 1rem;
@@ -180,10 +185,6 @@ span.tag {
 }
 
 .areas {
-  height: 700px;
-
-  margin-top: 64px;
-  margin-bottom: 64px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -206,10 +207,10 @@ span.tag {
 }
 
 .areas article img {
-  width: 350px;
+  width: 450px;
   height: 250px;
   background: #e0e0e0;
-  object-fit: fill;
+  object-fit: cover;
   display: block;
   margin: 0;
   padding: 0;
@@ -236,13 +237,12 @@ span.tag {
   font-size: 48px;
   align-items: flex-start;
   margin: 0 auto;
-  margin-bottom: 32px;
-  margin-top: 32px;
+  /* margin-bottom: 32px;
+  margin-top: 32px; */
 }
 
 .experiencia {
   width: 100%;
-  height: 702px;
   background-color: #e7e4e1;
   align-items: flex-start;
 }
@@ -318,7 +318,7 @@ span.tag {
 .btn-contato2 {
   background: #5d5a57;
   color: white;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 9999px;
   cursor: pointer;
@@ -349,14 +349,14 @@ footer {
 
 .footer-content {
   max-width: 1200px;
-  margin: 0 auto 24px auto;
+  margin: 0 auto;
 }
 
 .footer-main {
   display: flex;
   gap: 48px;
   align-items: flex-start;
-  padding: 32px;
+  padding: 6rem 0;
   border-radius: 2px;
 }
 
@@ -393,7 +393,6 @@ footer {
 }
 
 .footer-copy {
-  padding-left: 32px;
   font-size: 14px;
   color: #cacaca;
   font-family: "Montserrat", sans-serif;
@@ -429,7 +428,7 @@ footer {
   }
 
   .container {
-    padding: 16px;
+    padding: 6rem 0;
   }
 
   .hero {
@@ -533,6 +532,13 @@ p a {
   text-decoration: none;
   color: inherit;
   transition: color 0.3s;
+}
+
+.divider-team-ig {
+  height: 0.25rem;
+  width: 100%;
+  background-color: #cacaca;
+  border: none;
 }
 
 #instagram {
@@ -708,12 +714,16 @@ p a {
     }
   }
 }
+
 .team-container {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;       
   text-align: center;
-  margin-bottom: 64px;
+  padding: 6rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
 }
 
 .equipes {
