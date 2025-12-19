@@ -887,7 +887,7 @@ p a {
     -webkit-backdrop-filter: blur(6px);
     border-radius: 4px;
     padding: 32px;
-    margin-bottom: 150px;
+    margin-bottom: 120px;
     overflow: hidden;
     background-clip: padding-box;
   }
